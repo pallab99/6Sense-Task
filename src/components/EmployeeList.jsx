@@ -37,28 +37,7 @@ const EmployeeList = () => {
       });
   }, []);
 
-  // const [block,setBlock]=useState('');
-  // const handleToggle=(flag)=>{
-  //   if(flag==='Unblock')
-  //   setBlock('Block')
-  //   else
-  //   setBlock('Unblock');
-  //   axios
-  //     .put(`http://localhost:8000/Employee/${employee.id}`, {
-  //       FirstName: firstName,
-  //       LastName: lastName,
-  //       Email: email,
-  //       PhoneNumber: phone,
-  //       status:`${block}`
-  //     })
-  //     .then((response) => {
-  //       alert('Data Updated Successfully');
-  //       // navigate('/');
-  //     })
-  //     .catch((err) => {
-  //       console.log(err.message);
-  //     });
-  // }
+
 
   return (
     <div className="">
@@ -103,9 +82,7 @@ const EmployeeList = () => {
 
                           <button
                             className="text-white bg-yellow-500 hover:bg-yellow-600 focus:ring-4  rounded-xl text-sm px-2 py-1 mr-2  focus:outline-none mb-4 cursor-pointer ml-2"
-                            // onClick={() => {
-                            //   handleToggle(item.status);
-                            // }}
+                            
                           >
                             {item.status}
                           </button>

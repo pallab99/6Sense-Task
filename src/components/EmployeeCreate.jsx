@@ -30,8 +30,13 @@ const EmployeeCreate = () => {
       });
   };
   return (
-    <div className="create-container flex justify-center w-full items-center mt-10">
-      <form className="" onSubmit={handleSubmit}>
+    <div>
+      <div className=''>
+      <h2 className="text-5xl text-center my-5">Employee Create</h2>
+      </div>
+    <div className="create-container flex justify-center w-full items-center mt-10 ">
+      
+      <form className="w-80 h-96" onSubmit={handleSubmit}>
         <div className="">
           <label className="">First Name</label>
           <input
@@ -123,6 +128,7 @@ const EmployeeCreate = () => {
           </Link>
         </div>
       </form>
+    </div>
     </div>
   );
 };
