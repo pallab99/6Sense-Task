@@ -9,6 +9,7 @@ const EmployeeCreate = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  //!Axios post method to create a new employee details
   const handleSubmit = (e) => {
     e.preventDefault();
     axios
@@ -20,10 +21,10 @@ const EmployeeCreate = () => {
       })
       .then((response) => {
         alert('Data Saved Successfully');
-        console.log(response);
         navigate('/');
+      }).catch((err) => {
+        console.log(err.message);
       });
-    console.log({ firstName, lastName, email, phone });
   };
   return (
     <div className="create-container flex justify-center w-full items-center mt-10">
