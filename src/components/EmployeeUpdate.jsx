@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 
 const EmployeeUpdate = () => {
-    //!Dynamically getting the employee id to update the details
+  //!Dynamically getting the employee id to update the details
   const { empid } = useParams();
 
   const navigate = useNavigate();
@@ -12,6 +12,7 @@ const EmployeeUpdate = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [status, setStatus] = useState('');
 
   //!First loading all the data from api using the axios get method
   useEffect(() => {
@@ -20,6 +21,7 @@ const EmployeeUpdate = () => {
       setLastName(res.data.LastName);
       setEmail(res.data.Email);
       setPhone(res.data.PhoneNumber);
+      setStatus(res.data.status);
     });
   }, []);
 
@@ -33,6 +35,7 @@ const EmployeeUpdate = () => {
         LastName: lastName,
         Email: email,
         PhoneNumber: phone,
+        status: status,
       })
       .then((response) => {
         alert('Data Updated Successfully');
@@ -96,6 +99,18 @@ const EmployeeUpdate = () => {
                 setPhone(e.target.value);
               }}
               required
+            />
+          </div>
+
+          <div className="">
+            <label className="">Status</label>
+            <input
+              className="block w-full py-1 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600"
+              value={status}
+            //   disabled="disabled"
+              onChange={(e) => {
+                setStatus(e.target.value);
+              }}
             />
           </div>
 

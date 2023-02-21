@@ -37,12 +37,11 @@ const EmployeeList = () => {
       });
   }, []);
 
-
   // const [block,setBlock]=useState('');
   // const handleToggle=(flag)=>{
   //   if(flag==='Unblock')
   //   setBlock('Block')
-  //   else 
+  //   else
   //   setBlock('Unblock');
   //   axios
   //     .put(`http://localhost:8000/Employee/${employee.id}`, {

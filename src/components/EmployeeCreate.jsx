@@ -9,6 +9,7 @@ const EmployeeCreate = () => {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
+  const [status, setStatus] = useState('');
   //!Axios post method to create a new employee details
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -18,11 +19,13 @@ const EmployeeCreate = () => {
         LastName: lastName,
         Email: email,
         PhoneNumber: phone,
+        status: status,
       })
       .then((response) => {
         alert('Data Saved Successfully');
         navigate('/');
-      }).catch((err) => {
+      })
+      .catch((err) => {
         console.log(err.message);
       });
   };
@@ -87,6 +90,21 @@ const EmployeeCreate = () => {
           />
           {phone.length == 0 && (
             <span className="text-red-500">Enter the Phone Number</span>
+          )}
+        </div>
+
+        <div className="">
+          <label className="">Status</label>
+          <input
+            className="block w-full py-1 px-0  text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600"
+            value={status}
+            onChange={(e) => {
+              setStatus(e.target.value);
+            }}
+            required
+          />
+          {status.length == 0 && (
+            <span className="text-red-500">Enter the status</span>
           )}
         </div>
 
