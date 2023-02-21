@@ -104,7 +104,7 @@ const EmployeeCreate = () => {
             required
           />
           {status.length == 0 && (
-            <span className="text-red-500">Enter the status</span>
+            <span className="text-red-500">Enter the status (Block or Unblock)</span>
           )}
         </div>
 

@@ -29,6 +29,7 @@ const EmployeeDetails = () => {
           </h2>
           <h2 className="my-2">Email is : {employee.Email}</h2>
           <h2 className="my-2">Phone Number is : {employee.PhoneNumber}</h2>
+          <h2 className="my-2">Employee Status is : {employee.status}</h2>
           <div className="flex my-7 justify-end">
             <Link
               to="/"
